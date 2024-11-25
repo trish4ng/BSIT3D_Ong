@@ -9,7 +9,10 @@ body {
     padding: 0;
     background-color: #FFCBCB;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: url("/images/bg3.png");
+    background-image: radial-gradient(circle, #ffffff, #ffb6c1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: center center;
     width: 100%;
     height: 100%;
 }
@@ -77,9 +80,12 @@ html {
     display: flex;
     justify-content: center; /* Align items from the left */
     align-items: center; /* Vertically center content */
-    padding: 20px;
+    padding: 1px;
     max-width: 1200px; /* Control the overall width of the layout */
-    margin: 150px auto; /* Center the flex container horizontally */
+    margin-top: 150px; /* Center the flex container horizontally */
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
     gap: 10px; /* Reduce space between the text and image containers */
 }
 
@@ -120,8 +126,13 @@ button {
     margin-top: 10px;
 }
 
+button a {
+    color: white;
+}
+
 button i {
     margin-left: 10px;
+    color: white;
 }
 
 button:hover {
@@ -163,13 +174,18 @@ button:hover {
 
 /* Services Section */
 .services-section {
-    padding: 5px 200px;
+    padding: 80px 200px;
     text-align: center;
+}
+
+#services1 {
+    margin-top: 80px;
 }
 
 .services-section h2 {
     font-size: 30px;
     margin-bottom: 10px;
+    margin-top: 20px;
     color: #921A40;
 }
 
@@ -177,7 +193,7 @@ button:hover {
     font-size: 18px;
 }
 
-.services {
+.services-div {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 90px;
@@ -186,7 +202,8 @@ button:hover {
 
 .service-card {
     background: #fff;
-    padding: 20px;
+    padding: 15px;
+    margin: 0;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -217,7 +234,10 @@ button:hover {
     text-align: center;
     padding: 50px 20px;
     background-color: transparent; /* Make the background transparent */
-    background-image: inherit; /* Inherit the main background image if needed */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-repeat: no-repeat; /* Prevents repeating the background image */
+    background-position: center center; /* Centers the background image */
+    padding: 50px 0; /* Adds some space around the content */
 }
 
 .feedback-section h2 {
@@ -338,7 +358,7 @@ button:hover {
     cursor: pointer;
     font-size: 0.9rem;
     color: black;
-    background-color: gainsboro;
+    background-color: #ffb6c1;
   }
   
   .filter-btn.active,
@@ -361,12 +381,16 @@ button:hover {
     border-radius: 10px;
     overflow: hidden;
     background-color: #fff;
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .project-card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 8px;
+    margin: 0;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Reduced scaling */
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.15); /* Adjusted shadow */
+}
   
   .project-card img {
     width: 100%;
